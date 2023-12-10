@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+#defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
@@ -20,6 +20,25 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('pages/header');
+		$this->load->view('pages/home');
+	}
+
+	public function about()
+	{
+		$this->load->view('pages/header');
+		$this->load->view('pages/about');
+	}
+
+	public function contact()
+	{
+		$this->load->view('pages/header');
+		$this->load->view('pages/contact');
+	}
+
+	public function home()
+	{
+		$this->load->view('pages/header');
+		$this->load->view('pages/home');
 	}
 }
